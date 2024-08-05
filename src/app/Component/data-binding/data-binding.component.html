@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-4">
+        InterPolision
+        <h1>{{courseName}}</h1>
+
+    </div>
+    <div class="col-4">
+        {{isIndain}}
+        <div> {{inputeType}}</div>
+        <input type="text" value={{rollNo}} placeholder="Enetr Name">
+        <!-- <input type="{{courseName}}"> -->
+
+        <input type="text" value={{courseName}} placeholder="Enetr Name">
+
+
+
+    </div>
+    <div class="col-4">
+        <button class="btn bg-success mt-4 " (click)="showAlert('Welcone Nakul pal')">Show Welcome</button>
+        <span (click)="changeCourseName()">ChangeCourseName</span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <input type="text" [(ngModel)]="courseName" /> {{courseName}}
+    </div>
+    <div class="col-4">
+        <select [(ngModel)]="sateNAme" name="" id="">
+            <option value="">Select</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Goa">Goa</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Punjab">Punjab</option>
+
+        </select>
+    </div>
+    <div class="col-4">
+        <h1>{{firstNAme()}}</h1>
+        <button class="btn btn-danger" (click)="changeSignalName()">Change Signal</button>
+    </div>
+</div>

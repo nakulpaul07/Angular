@@ -1,0 +1,70 @@
+<h2 class="text-center">for works!</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ul>
+                @for (item of cityArray; track $index) {
+                <li>{{item}}</li>
+                }
+
+            </ul>
+        </div>
+
+        <div class="col-4">
+            @for (item of cityArray; track $index) {
+            <div>
+                {{item}}
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+<h1 class="my-5 text-center">Switch Case</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <input type="text" [(ngModel)]="dayNumber" name="" id="">
+        </div>
+        <div class="col-4">
+            Day Name Is:
+            @switch (dayNumber) {
+            @case ('1') {
+            <span>Monday</span>
+            }
+
+            @case ('2') {
+            <span>Tuesday</span>
+            }
+
+            @case ('3') {
+            <span>Wednesday</span>
+            }
+
+            @case ('4') {
+            <span>Thursday</span>
+            }
+
+            @case ('5') {
+            <span>Friday</span>
+            }
+
+            @case ('6') {
+            <span>Saturday</span>
+            }
+
+            @case ('7') {
+            <span>Sunday</span>
+            }
+
+            @default {
+            <span>Wrong Entery</span>
+            }
+
+            }
+
+
+        </div>
+    </div>
+</div>

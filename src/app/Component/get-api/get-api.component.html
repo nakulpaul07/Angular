@@ -1,0 +1,25 @@
+<h1>get-api works!</h1>
+
+<div>
+    <button class="btn btn-primary" (click)="getAllUser()">Get Api</button>
+</div>
+
+<div>
+
+    @for (item of userList; track $index) {
+    <p>{{item.name}}</p>
+    }
+
+</div>
+
+<div class="mt-5">
+    <button class="btn btn-primary" (click)="getAllTender()">Get Tender</button>
+</div>
+
+<div>
+
+    @for (item of TenderList; track $index) {
+    <p>{{item.name}}</p>
+    }
+
+</div>

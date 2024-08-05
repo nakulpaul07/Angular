@@ -1,0 +1,102 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>if-else works!</h1>
+
+</div>
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-3">
+            @if(div1visiable == true){
+            <div class="bg-danger p-3 text-center">
+                <h4 class="">Div-1</h4>
+            </div>
+            }
+
+        </div>
+
+        <div class="col-3">
+            @if(iswarningvisiable){
+            <div class="bg-dark text-white p-3 text-center">
+
+                <h4>Div-2 Dark</h4>
+            </div>
+            } @else{
+            <div class="bg-primary text-white p-3 text-center">
+
+                <h4>Div-2 Pimary</h4>
+            </div>
+
+            }
+
+
+        </div>
+
+        <div class="col-3">
+            <div class="bg-success p-3 text-center ">
+                <h4>Div-3</h4>
+            </div>
+        </div>
+
+        <div class="col-3">
+            @if(selectedStatus == 'Active'){
+            <div class="bg-primary p-3 text-center">
+                <h4>Active</h4>
+            </div>
+            }
+            @else if (selectedStatus == 'De-Active') {
+            <div class="bg-secondary p-3 text-center">
+                <h4>De-Active</h4>
+            </div>
+            }@else if (selectedStatus == 'Pending') {
+            <div class="bg-dark text-white p-3 text-center">
+                <h4>Pending</h4>
+            </div>
+
+            }
+            @else {
+            <div class="bg-info p-3 text-center">
+                <h4>Select Status</h4>
+            </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row pt-3">
+        <div class="col-3">
+            <button class="btn-info btn" (click)="hidediv()">Hide</button>
+            <button class="btn-primary btn mx-2" (click)="showdiv()">Show</button>
+        </div>
+
+        <div class="col-3">
+            <button class="btn-info btn" (click)="toggleDiv2()">Toggle</button>
+        </div>
+
+        <div class="col-3">
+            <div>
+                <input class="my-3" type="text" placeholder="Num-1">
+                <input type="text" placeholder="Num-2">
+
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div>
+                <div class="my-3">
+                    <input class="my-3" type="checkbox" name="" id="">
+                    <select name="" id="" [(ngModel)]="selectedStatus">
+                        <option value="">Select Status</option>
+                        <option value="Active">Active</option>
+                        <option value="De-Active">De-Active</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

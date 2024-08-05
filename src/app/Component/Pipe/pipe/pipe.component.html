@@ -1,0 +1,45 @@
+<h3 class="mb-4">pipe works!</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            Original Value - {{firstName}}
+            <br>
+            After Pie - {{firstName | uppercase }}
+        </div>
+
+        <div class="col-4">
+            Original Value - {{firstName}}
+            <br>
+            After Pie - {{firstName | lowercase }}
+        </div>
+
+        <div class="col-4">
+            Original Value - {{firstName}}
+            <br>
+            After Pie - {{firstName | titlecase }}
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-4">
+            Original Value - {{currentData}}
+            <br>
+            After Pie - {{currentData | date:"dd/MMMM/YYYY" }}
+        </div>
+
+        <div class="col-4">
+            Original Value - {{student}}
+            <br>
+            After Pie - {{student|json}}
+        </div>
+
+        <div class="col-4">
+            Original Value - {{firstName}}
+            <br>
+            After Pie - {{firstName | titlecase }}
+        </div>
+    </div>
+</div>

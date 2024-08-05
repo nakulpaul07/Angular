@@ -1,0 +1,108 @@
+<h3 class="text-center bg-info mx-5 p-3 mt-2 text-dark">Post API</h3>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-3">
+
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="mt-1">
+                        Name
+                    </label>
+                    <input type="text" [(ngModel)]="TenderObj.name" class="form-control" id="exampleFormControlInput1"
+                        autoComplete="off" placeholder="Enter Name" name="name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="mt-1">
+                        Descripition
+                    </label>
+                    <input type="text" [(ngModel)]="TenderObj.description" class="form-control"
+                        id="exampleFormControlInput1" placeholder="Descripition" name="description" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="mt-1">
+                        Start time
+                    </label>
+                    <input type="date" [(ngModel)]="TenderObj.start_time" class="form-control"
+                        id="exampleFormControlInput1" placeholder="Enter Name" name="start_time" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="mt-1">
+                        End Time
+                    </label>
+                    <input type="date" [(ngModel)]="TenderObj.end_time" class="form-control"
+                        id="exampleFormControlInput1" placeholder="Enter Time" name="end_time" />
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="mt-1">
+                        Buffer Time
+                    </label>
+                    <input type="text" [(ngModel)]="TenderObj.buffer_time" class="form-control"
+                        id="exampleFormControlInput1" placeholder="Buffer Time" name="buffer_time" />
+                </div>
+                <div>
+                    <!-- {{TenderObj|json}} -->
+
+
+                    @if (TenderObj.tender_Id == 0) {
+                    <button type="submit" (click)="onSave()" class="btn btn-primary btn-lg btn-block mt-4">
+                        Submit
+                    </button>
+                    }@else {
+                    <button type="submit" (click)="onUpdate()" class="btn btn-success btn-lg btn-block mt-4">
+                        Update
+                    </button>
+                    }
+
+
+                </div>
+
+            </form>
+        </div>
+
+
+        <div class="col-md-9">
+            <table class="table table-success mt-4 mb-4">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Descripition</td>
+                        <td>Start_time</td>
+                        <td>End_time</td>
+                        <td>Buffer_time</td>
+                        <td>Edit</td>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (item of TenderList; track $index) {
+                    <tr>
+                        <td>{{item._id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+
+
+                        <td>{{item.start_time}}</td>
+                        <td>{{item.end_time}}</td>
+                        <td>{{item.buffer_time}}</td>
+                        <td><button class="btn btn-primary" (click)="onEdit(item)">
+                                Edit
+                            </button></td>
+
+                    </tr>
+                    }
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+</div>
